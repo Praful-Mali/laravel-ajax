@@ -1,0 +1,79 @@
+
+
+		**************************************************************
+		****************************************************************
+		
+		http://www.tutorials.kode-blog.com/laravel-5-angularjs-tutorial
+		
+									Laravel -5
+		******************************************************************
+		*****************************************************************
+		
+		1. create project laravel using composer 
+		
+			COMMAND : - create-project laravel/laravel --prefer-dist
+		
+		2. update composer after create project
+			
+			COMMAND : - composer update
+		
+		3.	Adding The Vagrant Box
+		
+			COMMAND :-vagrant box add laravel/homestead
+			
+		4. create controller laravel 5.1
+
+			php artisan make:controller foldername/SomeController
+		
+		5.	intaller Html and form class in laravel 5.1
+		
+			composer.js
+			required{
+				laravelcollective/html (v5.1.9) intalled this
+			}
+			
+			
+			then update composer
+			
+			'Collective\Html\HtmlServiceProvider::class'
+			
+			'Form'      => Collective\Html\FormFacade::class, 
+			'Html'      => Collective\Html\HtmlFacade::class,
+			 
+			after updating put app.php in class and provider.
+	
+		6.	Include file in laravel 5.1
+		
+				@yeild('content');
+				@include('');
+				@section('');
+				@endsection;
+				
+			{!! user for include file !!}	
+			{{ @variable }}
+		
+		
+		7. HTML class function
+		
+			Html::style();
+			Html::script();
+			Html::image('path','alert',array('class'=>'img-circle');
+		
+		8. route create 
+		
+			Route::get('keyword','ControllerName@functionName');
+			Route::post();
+			
+		9. create table in database using php artisan command
+
+			php artisan make:migration create_users_table --create=users
+			
+			create structer in database 
+			
+				php artisan migrate
+			
+			remove table
+			
+				php artisan migrate:rollback
+				
+			
